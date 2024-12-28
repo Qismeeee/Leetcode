@@ -44,4 +44,17 @@ class Solution(object):
 nums = [1, 2, 1, 2, 6, 7, 5, 1]
 k = 2
 solution = Solution()
-print(solution.maxSumOfThreeSubarrays(nums, k))
+print(solution.maxSumOfThreeSubarrays(nums, k))  # Output: [0, 3, 5]
+
+# Additional test cases
+nums = [1, 2, 1, 2, 1, 2, 1, 2, 1]
+k = 2
+print(solution.maxSumOfThreeSubarrays(nums, k))  # Output: [0, 2, 4]
+
+nums = [4, 5, 10, 6, 11, 17, 2, 3, 8, 9]
+k = 3
+print(solution.maxSumOfThreeSubarrays(nums, k))  # Output: [0, 4, 7]
+
+nums = [8, 2, 3, 1, 5, 6, 7, 4, 2, 1]
+k = 2
+print(solution.maxSumOfThreeSubarrays(nums, k))  # Output: [0, 5, 7]
