@@ -21,3 +21,13 @@ class Solution(object):
                 result.append(word)
 
         return result
+    
+
+solution = Solution()
+words1 = ["amazon", "apple", "facebook", "google", "leetcode"]
+words2 = ["e", "o"]
+print(solution.wordSubsets(words1, words2)) 
+
+words1 = ["amazon", "apple", "facebook", "google", "leetcode"]
+words2 = ["l", "e"]
+print(solution.wordSubsets(words1, words2)) 
