@@ -31,3 +31,48 @@ class Solution(object):
                     heapq.heappush(min_heap, (max(height, heightMap[nx][ny]), nx, ny))
         
         return trapped_water
+
+
+def test_trapRainWater():
+    solution = Solution()
+    # Test Case 1
+    heightMap1 = [
+        [1, 4, 3, 1, 3, 2],
+        [3, 2, 1, 3, 2, 4],
+        [2, 3, 3, 2, 3, 1]
+    ]
+    print(solution.trapRainWater(heightMap1)) 
+    
+    # Test Case 2
+    heightMap2 = [
+        [3, 3, 3, 3, 3],
+        [3, 2, 2, 2, 3],
+        [3, 2, 1, 2, 3],
+        [3, 2, 2, 2, 3],
+        [3, 3, 3, 3, 3]
+    ]
+    print(solution.trapRainWater(heightMap2)) 
+    
+    # Test Case 3 (No trapping possible)
+    heightMap3 = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]
+    ]
+    print(solution.trapRainWater(heightMap3)) 
+    
+    # Test Case 4 (Single cell, no water)
+    heightMap4 = [
+        [1]
+    ]
+    print(solution.trapRainWater(heightMap4))  
+    
+    # Test Case 5 (Flat surface, no water)
+    heightMap5 = [
+        [1, 1, 1],
+        [1, 1, 1],
+        [1, 1, 1]
+    ]
+    print(solution.trapRainWater(heightMap5))  
+
+test_trapRainWater()
