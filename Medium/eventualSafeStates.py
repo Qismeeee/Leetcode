@@ -24,3 +24,7 @@ class Solution(object):
                 safe_nodes.append(i)
         
         return safe_nodes
+
+graph = [[1,2,3,4],[1,2],[3,4],[0,4],[]]
+solution = Solution()
+print(solution.eventualSafeNodes(graph))
