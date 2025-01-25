@@ -5,38 +5,29 @@ class Solution(object):
         :type limit: int
         :rtype: List[int]
         """
-        
-        def find(x):
-            if parent[x] != x:
-                parent[x] = find(parent[x])  
-            return parent[x]
-        
-        def union(x, y):
-            rootX = find(x)
-            rootY = find(y)
-            if rootX != rootY:
-                parent[rootY] = rootX  
-        
         n = len(nums)
-        parent = list(range(n))  
-        
-        for i in range(n):
-            for j in range(i + 1, n):
-                if abs(nums[i] - nums[j]) <= limit:
-                    union(i, j)
-        
-        groups = {}
-        for i in range(n):
-            root = find(i)
-            if root not in groups:
-                groups[root] = []
-            groups[root].append(i)
-        
+        sorted_indices = sorted(range(n), key=lambda x: nums[x])
         result = nums[:]
-        for group in groups.values():
-            sorted_values = sorted(result[i] for i in group)
-            for idx, value in zip(sorted(group), sorted_values):
-                result[idx] = value
+        current_group = []
+        
+        for i in range(n):
+            if not current_group:
+                current_group.append(sorted_indices[i])
+            else:
+                if abs(nums[sorted_indices[i]] - nums[sorted_indices[i-1]]) <= limit:
+                    current_group.append(sorted_indices[i])
+                else:
+                    current_group_values = [nums[idx] for idx in current_group]
+                    current_group_values.sort()
+                    for idx, val in zip(sorted(current_group), current_group_values):
+                        result[idx] = val
+                    current_group = [sorted_indices[i]]
+        
+        if current_group:
+            current_group_values = [nums[idx] for idx in current_group]
+            current_group_values.sort()
+            for idx, val in zip(sorted(current_group), current_group_values):
+                result[idx] = val
         
         return result
 
