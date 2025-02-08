@@ -28,3 +28,15 @@ class NumberContainers:
             heapq.heappop(self.number_to_indices[number])  
         
         return -1
+    
+
+if __name__ == "__main__":
+    nc = NumberContainers()
+    print(nc.find(10))  
+    nc.change(2, 10)
+    nc.change(1, 10)
+    nc.change(3, 10)
+    nc.change(5, 10)
+    print(nc.find(10)) 
+    nc.change(1, 20)
+    print(nc.find(10)) 
