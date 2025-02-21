@@ -39,3 +39,13 @@ print(find_elements.find(1))
 print(find_elements.find(3))  
 print(find_elements.find(2)) 
 print(find_elements.find(4))  
+
+
+root = TreeNode(-1, TreeNode(-1), TreeNode(-1, TreeNode(-1), TreeNode(-1)))
+find_elements = FindElements(root)
+print(find_elements.find(0))  
+print(find_elements.find(1))  
+print(find_elements.find(2))  
+print(find_elements.find(3))  
+print(find_elements.find(4))  
+print(find_elements.find(5)) 
