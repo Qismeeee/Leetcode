@@ -44,3 +44,13 @@ class Solution(object):
             query_idx += 1
         
         return [query_results[i] for i in range(len(queries))]
+    
+
+solution = Solution()
+grid = [[1, 2, 3], [2, 5, 7], [3, 5, 1]]
+queries = [5, 6, 2]
+result = solution.maxPoints(grid, queries)
+
+print(f"Grid: {grid}")
+print(f"Queries: {queries}")
+print(f"Kết quả: {result}")
