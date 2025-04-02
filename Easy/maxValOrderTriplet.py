@@ -14,3 +14,10 @@ class Solution(object):
                         max_val = value
                         
         return max_val
+
+s = Solution()
+print(s.maximumTripletValue([12, 6, 1, 2, 7]))  
+print(s.maximumTripletValue([1, 10, 3, 4, 19]))  
+print(s.maximumTripletValue([1, 2, 3]))  
+print(s.maximumTripletValue([5, 4, 3, 2, 1]))  
+print(s.maximumTripletValue([1, 1, 1, 1, 1]))  
