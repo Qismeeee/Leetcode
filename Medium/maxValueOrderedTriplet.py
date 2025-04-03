@@ -14,3 +14,20 @@ class Solution(object):
             max_i = max(max_i, nums[j])
 
         return result
+
+def test():
+    sol = Solution()
+    
+    # Test case 1
+    nums1 = [12, 6, 1, 2, 7]
+    print("Test case 1:", sol.maximumTripletValue(nums1))  
+
+    # Test case 2
+    nums2 = [1, 10, 3, 4, 19]
+    print("Test case 2:", sol.maximumTripletValue(nums2))  
+
+    # Test case 3
+    nums3 = [1, 2, 3]
+    print("Test case 3:", sol.maximumTripletValue(nums3))
+
+test()
