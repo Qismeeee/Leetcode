@@ -42,3 +42,19 @@ class Solution(object):
             
             return count_valid_numbers(0, True)
         return count_up_to(finish) - count_up_to(start - 1)
+    
+
+sol = Solution()
+
+test_cases = [
+    (1, 6000, 4, "124", 5),
+    (15, 215, 6, "10", 2),
+    (1000, 2000, 4, "3000", 0),
+    (1, 1000, 9, "7", 111),
+    (5000, 5500, 5, "42", 0),
+    (100, 999, 9, "99", 9)
+]
+
+for i, (start, finish, limit, s, expected) in enumerate(test_cases):
+    result = sol.numberOfPowerfulInt(start, finish, limit, s)
+    print(f"Test {i+1}: {result == expected}, Got {result}, Expected {expected}")
