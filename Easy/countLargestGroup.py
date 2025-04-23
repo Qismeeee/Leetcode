@@ -14,3 +14,11 @@ class Solution(object):
 
         max_size = max(groups.values())
         return sum(1 for count in groups.values() if count == max_size)
+
+
+s = Solution()
+print(s.countLargestGroup(13))  
+print(s.countLargestGroup(2))  
+print(s.countLargestGroup(15))  
+print(s.countLargestGroup(24)) 
+print(s.countLargestGroup(1))   
