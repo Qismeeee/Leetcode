@@ -22,3 +22,11 @@ class Solution(object):
             count[mod_val] += 1
 
         return result
+
+
+sol = Solution()
+print(sol.countInterestingSubarrays([3, 2, 4], 2, 1))   
+print(sol.countInterestingSubarrays([3, 1, 9, 6], 3, 0))
+print(sol.countInterestingSubarrays([1, 2, 3], 2, 0))    
+print(sol.countInterestingSubarrays([1, 1, 1], 1, 0))   
+print(sol.countInterestingSubarrays([5], 3, 2))         
