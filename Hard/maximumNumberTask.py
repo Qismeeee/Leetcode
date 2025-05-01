@@ -1,3 +1,5 @@
+import bisect
+
 class Solution(object):
     def maxTaskAssign(self, tasks, workers, pills, strength):
         tasks.sort()
@@ -27,3 +29,9 @@ class Solution(object):
                 right = mid - 1
 
         return left
+    
+if __name__ == "__main__":
+    s = Solution()
+    print(s.maxTaskAssign([3,2,1], [0,3,3], 1, 1))
+    print(s.maxTaskAssign([5,4], [0,0,0], 1, 5))
+    print(s.maxTaskAssign([10,15,30], [0,10,10,10,10], 3, 10))
