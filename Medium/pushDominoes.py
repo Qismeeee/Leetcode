@@ -19,3 +19,9 @@ class Solution(object):
                         r -= 1
             i = j
         return ''.join(res[1:-1])
+
+
+if __name__ == "__main__":
+    s = Solution()
+    print(s.pushDominoes("RR.L"))
+    print(s.pushDominoes(".L.R...LR..L.."))
