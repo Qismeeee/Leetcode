@@ -8,3 +8,10 @@ class Solution(object):
         for i in range(3, n + 1):
             dp[i] = (2 * dp[i - 1] + dp[i - 3]) % MOD
         return dp[n]
+    
+if __name__ == "__main__":
+    s = Solution()
+    print(s.numTilings(1), "expected", 1)
+    print(s.numTilings(2), "expected", 2)
+    print(s.numTilings(3), "expected", 5)
+    print(s.numTilings(4), "expected", 11)
