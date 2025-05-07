@@ -29,3 +29,8 @@ class Solution(object):
                     v.add((nx,ny))
         
         return -1             
+    
+s = Solution()
+print(s.minTimeToReach([[0, 4], [4, 4]]))       
+print(s.minTimeToReach([[0, 0, 0], [0, 0, 0]]))  
+print(s.minTimeToReach([[0, 1], [1, 2]]))  
