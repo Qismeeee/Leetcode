@@ -24,3 +24,7 @@ class Solution(object):
                         dist[ni][nj][np] = nt
                         heapq.heappush(hq, (nt, ni, nj, np))
         return -1
+
+print(Solution().minTimeToReach([[0,4],[4,4]])) 
+print(Solution().minTimeToReach([[0,0,0,0],[0,0,0,0]])) 
+print(Solution().minTimeToReach([[0,1],[1,2]]))  
