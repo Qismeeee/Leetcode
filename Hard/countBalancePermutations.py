@@ -41,3 +41,7 @@ class Solution(object):
                         ndp[used+k][ns] = (ndp[used+k][ns] + val) % MOD
             dp = ndp
         return dp[E][target] * fact[E] % MOD * fact[O] % MOD
+
+print(Solution().countBalancedPermutations("123"))  
+print(Solution().countBalancedPermutations("112"))  
+print(Solution().countBalancedPermutations("12345"))  
