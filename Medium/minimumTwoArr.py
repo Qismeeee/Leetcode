@@ -19,3 +19,7 @@ class Solution(object):
             return S if S - sum1 >= z1 else -1
         S = max(sum1 + z1, sum2 + z2)
         return S
+
+
+print(Solution().minSum([3,2,0,1,0], [6,5,0]))
+print(Solution().minSum([2,0,2,0], [1,4]))
