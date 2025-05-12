@@ -18,3 +18,7 @@ class Solution(object):
                     if all(freq[d] >= need[d] for d in need):
                         res.add(100 * a + 10 * b + c)
         return sorted(res)
+
+print(Solution().findEvenNumbers([2,1,3,0]))     
+print(Solution().findEvenNumbers([2,2,8,8,2]))    
+print(Solution().findEvenNumbers([3,7,5]))        
