@@ -39,3 +39,15 @@ class Solution:
             vt[i] = total
 
         return sum(vt) % MOD
+
+solver = Solution()
+
+s1 = "abcyy"
+t1 = 2
+nums1 = [1]*25 + [2]
+print(solver.lengthAfterTransformations(s1, t1, nums1)) 
+
+s2 = "azbk"
+t2 = 1
+nums2 = [2]*26
+print(solver.lengthAfterTransformations(s2, t2, nums2))  
