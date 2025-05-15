@@ -11,3 +11,7 @@ class Solution(object):
                 if len(new1) > len(dp1):
                     dp1 = new1
         return dp0 if len(dp0) >= len(dp1) else dp1
+
+words = ["a","b","c","d"]
+groups = [1,0,1,1]
+print(Solution().getLongestSubsequence(words, groups))
