@@ -27,3 +27,14 @@ class Solution(object):
                     best = m
                     answer = i
         return answer
+
+tests = [
+    ([2,2,3,-1], 0, 1, 2),
+    ([1,2,-1], 0, 2, 2),
+    ([-1,-1,-1], 0, 1, -1)
+]
+
+s = Solution()
+for edges, n1, n2, exp in tests:
+    res = s.closestMeetingNode(edges, n1, n2)
+    print(res == exp, res)
