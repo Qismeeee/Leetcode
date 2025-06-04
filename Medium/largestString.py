@@ -15,3 +15,6 @@ class Solution(object):
             if t > ans:
                 ans = t                               
         return ans                                   
+
+print(Solution().answerString("dbca", 2))  
+print(Solution().answerString("gggg", 4)) 
