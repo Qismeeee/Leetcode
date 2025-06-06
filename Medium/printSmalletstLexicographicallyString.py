@@ -15,3 +15,11 @@ class Solution(object):
                 result.append(t.pop())
         
         return ''.join(result)
+
+solution = Solution()
+
+print(solution.robotWithString("zza"))  
+print(solution.robotWithString("bac")) 
+print(solution.robotWithString("bdda")) 
+print(solution.robotWithString("cba"))
+print(solution.robotWithString("abc")) 
