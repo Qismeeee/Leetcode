@@ -23,3 +23,16 @@ class Solution(object):
             if ch != '*' and not removed[i]:
                 res.append(ch)
         return ''.join(res)
+
+
+tests = [
+    ("aaba*", "aab"),
+    ("abc",   "abc"),
+    ("a*b*c*", ""),
+]
+
+for s, expected in tests:
+    result = Solution().clearStars(s)
+    assert result == expected, f"{s}: expected {expected}, got {result}"
+
+print("All simple tests passed")
