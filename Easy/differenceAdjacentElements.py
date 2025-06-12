@@ -11,3 +11,6 @@ class Solution(object):
             if diff > max_diff:
                 max_diff = diff
         return max_diff
+
+print(Solution().maxAdjacentDistance([1, 2, 4]))      
+print(Solution().maxAdjacentDistance([-5, -10, -5]))
