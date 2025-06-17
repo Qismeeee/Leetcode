@@ -14,3 +14,16 @@ class Solution(object):
             invfact[i-1] = invfact[i] * i % MOD
         comb = fact[n-1] * invfact[c] % MOD * invfact[n-1-c] % MOD
         return m * comb % MOD * pow(m-1, c, MOD) % MOD
+    
+if __name__ == "__main__":
+    tests = [
+        (3, 2, 1, 4),
+        (4, 2, 2, 6),
+        (5, 2, 0, 2),
+        (6, 3, 2, 3 *  C(5, 3) * 2**3 % MOD),  
+        (1, 10, 0, 10),
+    ]
+    for n, m, k, expected in tests:
+        result = Solution().countGoodArrays(n, m, k)
+        status = 'PASS' if result == expected else 'FAIL'
+        print(f"n={n}, m={m}, k={k} -> {result} (expected {expected}) {status}")
