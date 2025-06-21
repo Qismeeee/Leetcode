@@ -25,3 +25,13 @@ class Solution(object):
             min_deletions = min(min_deletions, deletions)
         
         return min_deletions
+
+def test_solution():
+    sol = Solution()
+    result1 = sol.minimumDeletions("aabcaba", 0)
+    print(f"Example 1: {result1}")  
+    result2 = sol.minimumDeletions("dabdcbdcdcd", 2)
+    print(f"Example 2: {result2}") 
+    result3 = sol.minimumDeletions("aaabaaa", 2)
+    print(f"Example 3: {result3}")  
+test_solution()
