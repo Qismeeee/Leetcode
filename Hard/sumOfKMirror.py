@@ -58,3 +58,14 @@ class Solution(object):
                     break
         
         return sum(result)
+
+def test_solution():
+    sol = Solution()
+    result1 = sol.kMirror(2, 5)
+    print(f"Example 1 (k=2, n=5): {result1}")  
+    result2 = sol.kMirror(3, 7)
+    print(f"Example 2 (k=3, n=7): {result2}")  
+    result3 = sol.kMirror(5, 20)
+    print(f"Test case (k=5, n=20): {result3}")
+
+test_solution()
