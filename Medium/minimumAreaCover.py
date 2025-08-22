@@ -10,3 +10,24 @@ class Solution(object):
                     if i > max_r: max_r = i
                     if j > max_c: max_c = j
         return (max_r - min_r + 1) * (max_c - min_c + 1)
+
+
+def run_tests():
+    sol = Solution()
+    cases = [
+        ([[0,1,0],[1,0,1]], 6),
+        ([[1,0],[0,0]], 1),
+        ([[1]], 1),
+        ([[0,0,1,1,0]], 2),
+        ([[0],[1],[1],[0]], 2),
+        ([[0,0,0],[0,1,0],[0,0,0]], 1),
+        ([[1,0,0,0],[0,0,0,1],[0,0,0,0]], 8),
+        ([[0,0,0,1],[0,0,0,0],[1,0,0,0]], 12),
+        ([[0,0,0],[0,0,0],[0,0,1]], 1),
+    ]
+    for grid, expected in cases:
+        got = sol.minimumArea(grid)
+        assert got == expected, (grid, expected, got)
+    print("OK")
+
+run_tests()
