@@ -36,3 +36,23 @@ class Solution(object):
                     if s == 2:
                         ans += 1
         return ans
+
+
+def run_tests():
+    sol = Solution()
+    cases = [
+        ([[1,1],[2,2],[3,3]], 0),
+        ([[6,2],[4,4],[2,6]], 2),
+        ([[3,1],[1,3],[1,1]], 2),
+        ([[0,0],[1,0],[2,0]], 2),
+        ([[0,2],[2,0],[1,1]], 0),
+        ([[0,0],[3,0],[1,1],[2,2]], 1),
+        ([[0,3],[0,1],[0,2]], 2),
+        ([[-1,1],[0,0],[1,-1]], 2),
+    ]
+    for pts, expected in cases:
+        got = sol.numberOfPairs(pts)
+        assert got == expected, (pts, expected, got)
+    print("OK")
+
+run_tests()
