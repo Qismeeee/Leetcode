@@ -27,3 +27,21 @@ class Solution(object):
                 else:
                     ans.append(vowel_map.get(devowel(q), ""))
         return ans
+
+
+def run_tests():
+    s = Solution()
+    cases = [
+        (["KiTe","kite","hare","Hare"],
+         ["kite","Kite","KiTe","Hare","HARE","Hear","hear","keti","keet","keto"],
+         ["kite","KiTe","KiTe","Hare","hare","","","KiTe","","KiTe"]),
+        (["yellow"], ["YellOw"], ["yellow"]),
+        (["YellOw"], ["yollow","yeellow","yllw"], ["YellOw","",""]),
+        (["ABC","abc"], ["Abc","aBc","abd"], ["ABC","ABC",""]),
+    ]
+    for wordlist, queries, expected in cases:
+        out = s.spellchecker(wordlist, queries)
+        assert out == expected, f"expected {expected}, got {out}"
+        print(out)
+
+run_tests()
