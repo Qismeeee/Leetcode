@@ -28,3 +28,37 @@ class Spreadsheet(object):
         expr = formula[1:]
         x, y = expr.split('+')
         return self._term_value(x) + self._term_value(y)
+
+
+def run_tests():
+    ss = Spreadsheet(3)
+    assert ss.getValue("=5+7") == 12
+    ss.setCell("A1", 10)
+    assert ss.getValue("=A1+6") == 16
+    ss.setCell("B2", 15)
+    assert ss.getValue("=A1+B2") == 25
+    ss.resetCell("A1")
+    assert ss.getValue("=A1+B2") == 15
+    print("case1 ok")
+
+    ss = Spreadsheet(5)
+    assert ss.getValue("=0+0") == 0
+    ss.setCell("Z5", 100)
+    assert ss.getValue("=Z5+1") == 101
+    ss.setCell("C3", 7)
+    ss.setCell("C3", 9)
+    assert ss.getValue("=C3+Z5") == 109
+    ss.resetCell("Z5")
+    assert ss.getValue("=C3+Z5") == 9
+    print("case2 ok")
+
+    ss = Spreadsheet(2)
+    ss.setCell("A1", 1)
+    ss.setCell("B1", 2)
+    ss.setCell("C1", 3)
+    assert ss.getValue("=A1+B1") == 3
+    assert ss.getValue("=B1+C1") == 5
+    assert ss.getValue("=9+1") == 10
+    print("case3 ok")
+
+run_tests()
