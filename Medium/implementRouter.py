@@ -43,3 +43,47 @@ class Router(object):
         rem = self.dest_removed.get(destination, 0)
         removed_in_range = max(0, min(rem, r) - min(rem, l))
         return (r - l) - removed_in_range
+
+
+def run_tests():
+    r = Router(3)
+    assert r.addPacket(1,4,90) is True
+    assert r.addPacket(2,5,90) is True
+    assert r.addPacket(1,4,90) is False
+    assert r.addPacket(3,5,95) is True
+    assert r.addPacket(4,5,105) is True
+    assert r.forwardPacket() == [2,5,90]
+    assert r.addPacket(5,2,110) is True
+    assert r.getCount(5,100,110) == 1
+    print("case1 ok")
+
+    r = Router(2)
+    assert r.addPacket(7,4,90) is True
+    assert r.forwardPacket() == [7,4,90]
+    assert r.forwardPacket() == []
+    print("case2 ok")
+
+    r = Router(2)
+    assert r.addPacket(1,9,10) is True
+    assert r.addPacket(2,9,20) is True
+    assert r.getCount(9,0,100) == 2
+    assert r.addPacket(3,9,30) is True
+    assert r.getCount(9,0,100) == 2
+    assert r.forwardPacket() == [2,9,20]
+    assert r.getCount(9,0,25) == 0
+    assert r.getCount(9,21,40) == 1
+    print("case3 ok")
+
+    r = Router(5)
+    assert r.addPacket(1,1,5) is True
+    assert r.addPacket(1,1,6) is True
+    assert r.addPacket(2,1,7) is True
+    assert r.addPacket(3,2,8) is True
+    assert r.getCount(1,5,7) == 3
+    assert r.forwardPacket() == [1,1,5]
+    assert r.getCount(1,5,7) == 2
+    assert r.addPacket(4,1,9) is True
+    assert r.getCount(1,6,9) == 3
+    print("case4 ok")
+
+run_tests()
