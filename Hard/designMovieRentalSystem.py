@@ -86,3 +86,42 @@ class MovieRentingSystem(object):
         for item in popped:
             heapq.heappush(h, item)
         return res
+    
+def run_tests():
+    m = MovieRentingSystem(3, [[0,1,5],[0,2,6],[0,3,7],[1,1,4],[1,2,7],[2,1,5]])
+    assert m.search(1) == [1,0,2]
+    m.rent(0,1)
+    m.rent(1,2)
+    assert m.report() == [[0,1],[1,2]]
+    m.drop(1,2)
+    assert m.search(2) == [0,1]
+    print("case1 ok")
+
+    m = MovieRentingSystem(2, [[0,10,5],[1,10,5]])
+    assert m.search(10) == [0,1]
+    m.rent(1,10)
+    assert m.search(10) == [0]
+    assert m.report() == [[1,10]]
+    m.drop(1,10)
+    assert m.search(10) == [0,1]
+    print("case2 ok")
+
+    m = MovieRentingSystem(4, [[0,7,3],[1,7,3],[2,7,4],[3,7,3]])
+    assert m.search(7) == [0,1,3,2]
+    m.rent(0,7); m.rent(1,7); m.rent(3,7)
+    assert m.report() == [[0,7],[1,7],[3,7]]
+    m.drop(1,7)
+    assert m.search(7) == [1,2]
+    print("case3 ok")
+
+    m = MovieRentingSystem(5, [[0,1,8],[1,2,5],[2,3,5],[3,4,5],[4,5,6],[0,2,5]])
+    assert m.search(2) == [0,1]
+    m.rent(1,2); m.rent(2,3); m.rent(3,4); m.rent(0,2)
+    r = m.report()
+    assert r == [[1,2],[2,3],[3,4],[0,2]]
+    m.drop(0,2)
+    assert m.search(2) == [0]
+    print("case4 ok")
+
+run_tests()
+
