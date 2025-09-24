@@ -26,3 +26,26 @@ class Solution(object):
             rem %= d
 
         return ''.join(res)
+
+
+def run_tests():
+    s = Solution()
+    cases = [
+        (1, 2, "0.5"),
+        (2, 1, "2"),
+        (4, 333, "0.(012)"),
+        (1, 3, "0.(3)"),
+        (1, 6, "0.1(6)"),
+        (50, 8, "6.25"),
+        (-1, 2, "-0.5"),
+        (-22, 7, "-3.(142857)"),
+        (0, 7, "0"),
+        (1, 250, "0.004"),
+        (1, 90, "0.0(1)"),
+    ]
+    for num, den, expected in cases:
+        out = s.fractionToDecimal(num, den)
+        assert out == expected, f"{num}/{den}: expected {expected}, got {out}"
+        print(f"{num}/{den} -> {out}")
+
+run_tests()
