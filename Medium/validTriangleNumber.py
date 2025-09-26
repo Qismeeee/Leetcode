@@ -12,3 +12,22 @@ class Solution(object):
                 else:
                     i += 1
         return ans
+
+def run_tests():
+    s = Solution()
+    cases = [
+        ([2,2,3,4], 3),
+        ([4,2,3,4], 4),
+        ([0,0,0], 0),
+        ([1,1,1], 1),
+        ([2,3,4,5,6], 7),
+        ([1,2,2,3,4], 7),
+        ([2], 0),
+        ([], 0),
+    ]
+    for nums, expected in cases:
+        out = s.triangleNumber(nums)
+        assert out == expected, f"{nums}: expected {expected}, got {out}"
+        print(nums, out)
+
+run_tests()
