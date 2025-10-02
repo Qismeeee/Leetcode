@@ -15,3 +15,10 @@ class Solution(object):
             empty += full         
             numExchange += 1      
         return totalDrunk
+
+
+s = Solution()
+print(s.maxBottlesDrunk(13, 6)) 
+print(s.maxBottlesDrunk(10, 3))  
+print(s.maxBottlesDrunk(1, 2))   
+print(s.maxBottlesDrunk(15, 4))
