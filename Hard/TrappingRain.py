@@ -34,3 +34,7 @@ class Solution(object):
                     heapq.heappush(heap, (max(height, heightMap[nx][ny]), nx, ny))
 
         return res
+
+s = Solution()
+print(s.trapRainWater([[1,4,3,1,3,2],[3,2,1,3,2,4],[2,3,3,2,3,1]]))  # Output: 4
+print(s.trapRainWater([[3,3,3,3,3],[3,2,2,2,3],[3,2,1,2,3],[3,2,2,2,3],[3,3,3,3,3]]))  # Output: 10
