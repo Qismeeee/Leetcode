@@ -22,3 +22,33 @@ class Solution(object):
                 right -= 1
 
         return max_area
+
+def test_maxArea():
+    solution = Solution()
+    
+    # Test case 1
+    height1 = [1,8,6,2,5,4,8,3,7]
+    assert solution.maxArea(height1) == 49
+    print("Test case 1 passed.")
+
+    # Test case 2
+    height2 = [1,1]
+    assert solution.maxArea(height2) == 1
+    print("Test case 2 passed.")
+
+    # Test case 3
+    height3 = [4,3,2,1,4]
+    assert solution.maxArea(height3) == 16
+    print("Test case 3 passed.")
+
+    # Test case 4
+    height4 = [1,2,1]
+    assert solution.maxArea(height4) == 2
+    print("Test case 4 passed.")
+
+    # Test case 5 - edge case: only two elements
+    height5 = [0, 10]
+    assert solution.maxArea(height5) == 0
+    print("Test case 5 passed.")
+
+test_maxArea()
