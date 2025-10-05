@@ -37,3 +37,19 @@ class Solution(object):
                 if pacific[i][j] and atlantic[i][j]:
                     result.append([i, j])
         return result
+
+
+def test_pacific_atlantic():
+    solution = Solution()
+    
+    heights = [
+        [1, 2],
+        [4, 3]
+    ]
+    
+    expected_output = [[0,1], [1,0], [1,1]]
+    result = solution.pacificAtlantic(heights)
+    assert set(map(tuple, result)) == set(map(tuple, expected_output)), f"Failed test case. Got: {result}"
+    print("✅ Test case passed!")
+
+test_pacific_atlantic()
