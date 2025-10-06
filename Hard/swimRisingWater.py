@@ -24,3 +24,21 @@ class Solution(object):
                 if 0 <= nr < n and 0 <= nc < n and not visited[nr][nc]:
                     next_elevation = max(elevation, grid[nr][nc])
                     heapq.heappush(heap, (next_elevation, nr, nc))
+
+
+def test_swim_in_water():
+    sol = Solution()
+    
+    grid = [
+        [0, 2],
+        [1, 3]
+    ]
+    
+    expected = 3
+    result = sol.swimInWater(grid)
+    
+    assert result == expected, f"❌ Test failed: expected {expected}, got {result}"
+    print("✅ Test passed.")
+
+# Chạy test
+test_swim_in_water()
