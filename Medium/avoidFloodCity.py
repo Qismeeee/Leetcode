@@ -24,3 +24,7 @@ class Solution(object):
                 last[lake] = i
                 ans[i] = -1                      
         return ans
+
+rains = [1,2,0,0,2,1]
+s = Solution()
+print(s.avoidFlood(rains))
