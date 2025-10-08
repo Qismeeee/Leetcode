@@ -10,3 +10,10 @@ class Solution(object):
             idx = bisect.bisect_left(potions, need)
             res.append(m - idx)
         return res
+
+
+spells = [5,1,3]
+potions = [1,2,3,4,5]
+success = 7
+s = Solution()
+print(s.successfulPairs(spells, potions, success))
