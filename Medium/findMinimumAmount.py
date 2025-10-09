@@ -14,3 +14,9 @@ class Solution(object):
                     gap = v
             ans += gap
         return ans
+
+
+skill = [1,5,2,4]
+mana = [5,1,4,2]
+s = Solution()
+print(s.minTime(skill, mana))
