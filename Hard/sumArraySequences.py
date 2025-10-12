@@ -46,3 +46,9 @@ class Solution(object):
                 ans = (ans + dp[carry][need][m]) % MOD
         ans = ans * fact[m] % MOD
         return ans
+
+m = 2
+k = 2
+nums = [5,4,3,2,1]
+s = Solution()
+print(s.magicalSum(m, k, nums))
