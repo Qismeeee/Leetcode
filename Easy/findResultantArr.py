@@ -8,3 +8,7 @@ class Solution(object):
                 res.append(w)
                 prev_key = key
         return res
+
+words = ["abba","baba","bbaa","cd","cd"]
+s = Solution()
+print(s.removeAnagrams(words))
