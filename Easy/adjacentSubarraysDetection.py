@@ -9,3 +9,8 @@ class Solution(object):
             if inc[a + k - 1] >= k and inc[a + 2*k - 1] >= k:
                 return True
         return False
+
+nums = [2,5,7,8,9,2,3,4,3,1]
+k = 3
+s = Solution()
+print(s.hasIncreasingSubarrays(nums, k))
