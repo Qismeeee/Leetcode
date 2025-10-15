@@ -22,3 +22,10 @@ class Solution(object):
             else:
                 hi = mid - 1
         return lo
+
+nums = [2,5,7,8,9,2,3,4,3,1]
+s = Solution()
+print(s.maxIncreasingSubarrays(nums))
+
+nums = [1,2,3,4,4,4,4,5,6,7]
+print(s.maxIncreasingSubarrays(nums))
