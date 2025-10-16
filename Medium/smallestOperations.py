@@ -11,3 +11,12 @@ class Solution(object):
                 mex += 1
             else:
                 return mex
+
+nums = [1, -10, 7, 13, 6, 8]
+value = 5
+s = Solution()
+print(s.findSmallestInteger(nums, value))
+
+nums = [1, -10, 7, 13, 6, 8]
+value = 7
+print(s.findSmallestInteger(nums, value))
