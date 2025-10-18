@@ -10,3 +10,12 @@ class Solution(object):
                 ans += 1
                 cur = place + 1
         return ans
+
+nums = [1, 2, 2, 3, 3, 4]
+k = 2
+s = Solution()
+print(s.maxDistinctElements(nums, k))
+
+nums = [4, 4, 4, 4]
+k = 1
+print(s.maxDistinctElements(nums, k))
