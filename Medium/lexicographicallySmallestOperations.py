@@ -32,3 +32,13 @@ class Solution(object):
                 q.append(y)
 
         return best
+
+s = "5525"; a = 9; b = 2
+sol = Solution()
+print(sol.findLexSmallestString(s, a, b))
+
+s = "74"; a = 5; b = 1
+print(sol.findLexSmallestString(s, a, b))
+
+s = "0011"; a = 4; b = 2
+print(sol.findLexSmallestString(s, a, b))
