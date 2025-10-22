@@ -24,3 +24,13 @@ class Solution(object):
             ans = max(ans, min(cnt[v] + numOperations, m))
 
         return ans
+
+nums = [1,4,5]; k = 1; numOperations = 2
+s = Solution()
+print(s.maxFrequency(nums, k, numOperations))
+
+nums = [5,11,20,20]; k = 5; numOperations = 1
+print(s.maxFrequency(nums, k, numOperations))
+
+nums = [4,4,4,4]; k = 1; numOperations = 0
+print(s.maxFrequency(nums, k, numOperations))
