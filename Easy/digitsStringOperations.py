@@ -4,3 +4,13 @@ class Solution(object):
         while len(a) > 2:
             a = [(a[i] + a[i+1]) % 10 for i in range(len(a)-1)]
         return a[0] == a[1]
+
+s = "3902"
+sol = Solution()
+print(sol.hasSameDigits(s))  # True
+
+s = "34789"
+print(sol.hasSameDigits(s))  # False
+
+s = "11"
+print(sol.hasSameDigits(s))  # True
