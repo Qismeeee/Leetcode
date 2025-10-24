@@ -18,3 +18,12 @@ class Solution(object):
             if good(cur):
                 return cur
             cur += 1
+n = 1
+s = Solution()
+print(s.nextBeautifulNumber(n))  # 22
+
+n = 1000
+print(s.nextBeautifulNumber(n))  # 1333
+
+n = 3000
+print(s.nextBeautifulNumber(n))  # 3133
