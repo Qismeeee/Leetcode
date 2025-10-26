@@ -29,3 +29,13 @@ class Bank(object):
             return False
         self.bal[account - 1] -= money
         return True
+
+bank = Bank([10, 100, 20, 50, 30])
+
+print(bank.withdraw(3, 10))     # True, account 3: 20 -> 10
+print(bank.transfer(5, 1, 20))  # True, account 5: 30->10, account 1:10->30
+print(bank.deposit(5, 20))      # True, account 5: 10->30
+print(bank.transfer(3, 4, 15))  # False, account 3 only has 10
+print(bank.withdraw(10, 50))    # False, account 10 doesn't exist
+
+print(bank.bal)                 # Final balances to inspect
