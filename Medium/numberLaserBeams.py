@@ -8,3 +8,13 @@ class Solution(object):
                 ans += prev * cnt
                 prev = cnt
         return ans
+
+bank = ["011001","000000","010100","001000"]
+s = Solution()
+print(s.numberOfBeams(bank))  # 8
+
+bank = ["000","111","000"]
+print(s.numberOfBeams(bank))  # 0
+
+bank = ["1","0","1"]
+print(s.numberOfBeams(bank))  # 1
