@@ -5,3 +5,7 @@ class Solution(object):
             if target[i] > target[i-1]:
                 ans += target[i] - target[i-1]
         return ans
+s = Solution()
+print(s.minNumberOperations([1,2,3,2,1]))
+print(s.minNumberOperations([3,1,1,2]))
+print(s.minNumberOperations([3,1,5,4,2]))
