@@ -32,3 +32,15 @@ class Solution(object):
                 elif seen: guarded.add(p)
         total_empty = m * n - len(B)
         return total_empty - len(guarded)
+
+
+m = 4; n = 6
+guards = [[0,0],[1,1],[2,3]]
+walls = [[0,1],[2,2],[1,4]]
+s = Solution()
+print(s.countUnguarded(m, n, guards, walls))  # 7
+
+m = 3; n = 3
+guards = [[1,1]]
+walls = [[0,1],[1,0],[2,1],[1,2]]
+print(s.countUnguarded(m, n, guards, walls))  # 4
