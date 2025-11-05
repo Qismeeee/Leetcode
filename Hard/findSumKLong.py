@@ -91,3 +91,18 @@ class Solution(object):
             res.append(value)
 
         return res
+    
+
+from collections import defaultdict
+import heapq
+
+nums = [1,1,2,2,3,4,2,3]
+k = 6
+x = 2
+s = Solution()
+print(s.findXSum(nums, k, x))
+
+nums = [3,8,7,8,7,5]
+k = 2
+x = 2
+print(s.findXSum(nums, k, x))
