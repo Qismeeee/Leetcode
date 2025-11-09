@@ -9,3 +9,9 @@ class Solution(object):
                 cnt += num2 // num1
                 num2 %= num1
         return cnt
+
+s = Solution()
+print(s.countOperations(2, 3))   # 3
+print(s.countOperations(10, 10)) # 1
+print(s.countOperations(0, 5))   # 0
+print(s.countOperations(7, 4))   # 3
