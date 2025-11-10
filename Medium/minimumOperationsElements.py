@@ -66,3 +66,11 @@ class Solution(object):
             ans += comp_v
 
         return ans
+
+
+s = Solution()
+
+print(s.minOperations([0,2]))           # 1
+print(s.minOperations([3,1,2,1]))       # 3
+print(s.minOperations([1,2,1,2,1,2]))   # 4
+print(s.minOperations([0,0,0]))         # 0
