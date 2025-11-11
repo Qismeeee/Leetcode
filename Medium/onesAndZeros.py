@@ -14,3 +14,15 @@ class Solution(object):
                                    dp[i-zeros][j-ones] + 1)
 
         return dp[m][n]
+
+s = Solution()
+
+strs = ["10","0001","111001","1","0"]
+m = 5
+n = 3
+print(s.findMaxForm(strs, m, n))  # 4
+
+strs = ["10","0","1"]
+m = 1
+n = 1
+print(s.findMaxForm(strs, m, n))  # 2
