@@ -69,3 +69,11 @@ class Solution(object):
                     ans += n2 * s0 - n2 * (n2 - 1) // 2
 
         return ans
+
+s = Solution()
+
+print(s.numberOfSubstrings("00011"))   # 5
+print(s.numberOfSubstrings("101101"))  # 16
+print(s.numberOfSubstrings("1"))       # 1
+print(s.numberOfSubstrings("0"))       # 1
+print(s.numberOfSubstrings("1111"))    # 10
