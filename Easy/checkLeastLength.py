@@ -7,3 +7,10 @@ class Solution(object):
                     return False
                 last = i
         return True
+
+s = Solution()
+print(s.kLengthApart([1,0,0,0,1,0,0,1], 2))  # True
+print(s.kLengthApart([1,0,0,1,0,1], 2))      # False
+print(s.kLengthApart([1,0,1], 1))            # True
+print(s.kLengthApart([1,1], 0))              # True
+print(s.kLengthApart([1,1], 1))              # False
