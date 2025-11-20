@@ -22,3 +22,10 @@ class Solution(object):
                 last1 = e
 
         return ans
+
+
+s = Solution()
+
+print(s.intersectionSizeTwo([[1,3],[3,7],[8,9]]))          # 5
+print(s.intersectionSizeTwo([[1,3],[1,4],[2,5],[3,5]]))    # 3
+print(s.intersectionSizeTwo([[1,2],[2,3],[2,4],[4,5]]))    # 5
