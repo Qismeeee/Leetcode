@@ -18,3 +18,12 @@ class Solution(object):
                     seen.add(s[i])
                 ans += len(seen)
         return ans
+
+
+s = Solution()
+
+print(s.countPalindromicSubsequence("aabca"))    # 3
+print(s.countPalindromicSubsequence("adc"))      # 0
+print(s.countPalindromicSubsequence("bbcbaba"))  # 4
+print(s.countPalindromicSubsequence("aaa"))      # 1   ("aaa")
+print(s.countPalindromicSubsequence("abba"))     # 2   ("aaa"? no) → ("aba","bbb"? no) → actually only "aba","aaa"? only "aba" = 1
