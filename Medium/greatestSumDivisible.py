@@ -40,3 +40,13 @@ class Solution(object):
         if remove >= inf:
             return 0
         return total - remove
+
+
+s = Solution()
+
+print(s.maxSumDivThree([3,6,5,1,8]))     # 18
+print(s.maxSumDivThree([4]))             # 0
+print(s.maxSumDivThree([1,2,3,4,4]))     # 12
+print(s.maxSumDivThree([1,1,1]))         # 3
+print(s.maxSumDivThree([2,2,2,2]))       # 6
+print(s.maxSumDivThree([7,11,14]))       # 0
