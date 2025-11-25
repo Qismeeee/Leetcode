@@ -13,3 +13,11 @@ class Solution(object):
             if r == 0:
                 return length
         return -1
+
+s = Solution()
+
+print(s.smallestRepunitDivByK(1))   # 1
+print(s.smallestRepunitDivByK(2))   # -1
+print(s.smallestRepunitDivByK(3))   # 3
+print(s.smallestRepunitDivByK(7))   # 6   (111111 % 7 == 0)
+print(s.smallestRepunitDivByK(13))  # 6   (111111 % 13 == 0)
