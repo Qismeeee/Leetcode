@@ -48,3 +48,18 @@ class Solution(object):
                 dp[j] = ndp
 
         return dp[n-1][0] % MOD
+
+
+s = Solution()
+
+grid = [[5,2,4],[3,0,5],[0,7,2]]
+k = 3
+print(s.numberOfPaths(grid, k))  # 2
+
+grid = [[0,0]]
+k = 5
+print(s.numberOfPaths(grid, k))  # 1
+
+grid = [[7,3,4,9],[2,3,6,2],[2,3,7,0]]
+k = 1
+print(s.numberOfPaths(grid, k))  # 10
