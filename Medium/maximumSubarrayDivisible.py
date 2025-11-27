@@ -26,3 +26,15 @@ class Solution(object):
                 min_prefix[r] = pref[j]
 
         return ans
+
+# Test cases
+s = Solution()
+
+print(s.maxSubarraySum([1, 2], 1))            # Expected: 3
+print(s.maxSubarraySum([-1,-2,-3,-4,-5], 4))  # Expected: -10
+print(s.maxSubarraySum([-5,1,2,-3,4], 2))     # Expected: 4
+
+# Thêm vài test nhỏ
+print(s.maxSubarraySum([5], 1))               # Expected: 5
+print(s.maxSubarraySum([5], 1))               # Expected: 5
+print(s.maxSubarraySum([3, -1, 4, -1, 5], 2)) # Check: length divisible by 2
