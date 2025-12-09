@@ -22,3 +22,26 @@ class Solution(object):
             left[mid] += 1
 
         return ans % MOD
+
+
+
+s = Solution()
+# Test 1
+nums = [6,3,6]
+print("Test 1:", s.specialTriplets(nums))  
+
+# Test 2
+nums = [0,1,0,0]
+print("Test 2:", s.specialTriplets(nums)) 
+
+# Test 3
+nums = [8,4,2,8,4]
+print("Test 3:", s.specialTriplets(nums))  
+
+# Test 4: No triplet
+nums = [1,2,3,4]
+print("Test 4:", s.specialTriplets(nums)) 
+
+# Test 5: All zeros
+nums = [0,0,0,0]
+print("Test 5:", s.specialTriplets(nums))  
